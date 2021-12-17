@@ -70,20 +70,24 @@ class Bazooka() : ArmaDeFuego() {
 fun main(args: Array<String>) {
     var armas: ArrayList<ArmaDeFuego> = arrayListOf()
     var random = 0
-
     for(num in 0..5){
         random = (1..3).random()
         if(random==1){
             armas.add(Pistola("Pistola "+(num+1).toString(),"ligera",2,"pequeña"))
-            armas.get(num).dispara()
         }
         else if(random==2){
             armas.add(Rifle("Rifle "+(num+1).toString(),"mediana",2,"pequeña"))
-            armas.get(num).dispara()
         }
         else{
             armas.add(Bazooka("Bazooka "+(num+1).toString(),"grande",2,"amplío"))
-            armas.get(num).dispara()
         }
     }
+    val mapaArmas= mutableMapOf<String,ArmaDeFuego>("arma1" to armas.get(0), "arma2" to armas.get(1), "arma3" to armas.get(2), "arma4" to armas.get(3), "arma5" to armas.get(4), "arma6" to armas.get(5))
+    mapaArmas.get("arma1")?.dispara()
+    mapaArmas.get("arma2")?.dispara()
+    mapaArmas.get("arma3")?.dispara()
+    mapaArmas.get("arma4")?.dispara()
+    mapaArmas.get("arma5")?.dispara()
+    mapaArmas.get("arma6")?.dispara()
+
 }
