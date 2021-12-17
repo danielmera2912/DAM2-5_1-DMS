@@ -2,12 +2,12 @@ import java.util.*
 import kotlin.random.Random.Default.nextInt
 
 open class ArmaDeFuego() {
-    open var nombre: String= ""
-    open var municion: Int= 0
-    open var municionARestar: Int=0
-    open var tipoDeMunicion:String= ""
-    open var danio: Int= 0
-    open var radio: String= ""
+    open protected var nombre: String= ""
+    open protected var municion: Int= 0
+    open protected var municionARestar: Int=0
+    open protected var tipoDeMunicion:String= ""
+    open protected var danio: Int= 0
+    open protected var radio: String= ""
 
     constructor(nombre:String, tipoDeMunicion:String, danio:Int, radio:String, municion:Int=100) : this() {
         this.nombre=nombre
